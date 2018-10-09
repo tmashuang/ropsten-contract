@@ -1,0 +1,28 @@
+{
+  "name": "demo-dapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "beefy index.js:bundle.js --live --open --index=./index.html --cwd ./",
+    "build": "browserify index.js -o bundle.js",
+    "test": "SELENIUM_BROWSER=chrome mocha test/e2e.spec.js --recursive || true"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eth-query": "^2.1.0",
+    "ethereumjs-util": "ethereumjs/ethereumjs-util#ac5d0908536b447083ea422b435da27f26615de9",
+    "ethjs": "^0.2.8",
+    "web3": "^1.0.0-beta.36"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.5.2",
+    "beefy": "^2.1.8",
+    "browserify": "^14.5.0",
+    "fs": "0.0.1-security",
+    "mocha": "^4.0.1",
+    "selenium-webdriver": "^3.6.0"
+  }
+}
